@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import 'reset-css'
 import NavbarScroller from './components/'
-// import NavbarScrollerData from './ExampleData'
-
 
 const navigation = {
-  brand: { name: "NavbarScroller", to: "/" },
+  brand: { name: "NavScroller", to: "/" },
   links: [
     { name: "Item 1", to: "/" },
     { name: "Item 2", to: "/" },
@@ -25,6 +23,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <NavbarScroller brand={brand} links={links} />
+        <div className="hello">
+          <h1>React, TypeScript, Styled-Components!</h1></div>
       </div>
     );
   }

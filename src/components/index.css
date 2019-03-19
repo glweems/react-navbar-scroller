@@ -2,9 +2,24 @@
 html {
     overflow: scroll;
     overflow-x: hidden;
+    font-family: 'IBM Plex Sans';
 }
+h1 {
+  font-weight: bold;
+  font-size: 22px;
+  font-size: 4vw;
+}
+
+.hello {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem;
+  background: lightcoral;
+}
+
 ::-webkit-scrollbar {
-   display: none;
+  display: none;
 }
 ::-webkit-scrollbar-thumb {
     background: transparent;
