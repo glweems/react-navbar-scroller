@@ -294,7 +294,7 @@ export default NavbarScroller;
 ```
 
 
-Here is the styling I used for the styled-components
+### Here is the styling I used for the styled-components
 
 ```js
 const Theme = {
@@ -376,6 +376,9 @@ const NavbarScroller = (props: {
 };
 ```
 
-
 There you have it!
+
+--glweems
+
+![](https://raw.githubusercontent.com/gwtuts/react-navbar-scroller/master/demo.png)
 
