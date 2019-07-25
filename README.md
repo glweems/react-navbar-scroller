@@ -1,4 +1,5 @@
 ---
+path: react-navbar-scroller
 date: 2019-03-19
 title: Simple navbar using react, typescript, and styled-components.
 thumbnail: tbn.png
