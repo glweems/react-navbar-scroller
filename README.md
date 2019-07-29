@@ -420,4 +420,4 @@ There you have it!
 ![](https://raw.githubusercontent.com/gwtuts/react-navbar-scroller/master/demo.png)
 
 
-[react-navbar-scroller-example](embedded-codesandbox://./)
+[react-navbar-scroller-example](embedded-codesandbox://react-navbar-scroller)
