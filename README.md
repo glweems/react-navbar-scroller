@@ -17,9 +17,9 @@ In this project we will create a simple little Navbar component that has a logo 
 ![demo](tbn.png)
 
 <p align="center">
-  <a href="https://codesandbox.io/s/qzylvzx6rj?autoresize=1&fontsize=14&hidenavigation=1">Code Sandbox</a>
+  <a href="https://codesandbox.io/s/react-navbar-scroller-44wd0?fontsize=14">Code Sandbox</a>
   ·
-  <a href="https://github.com/gwtuts/react-navbar-scroller">GitHub Repo</a>
+  <a href="https://github.com/glweems/react-navbar-scroller">GitHub Repo</a>
 </p>
 
 ---
@@ -48,7 +48,7 @@ npm install --save-dev tslint-config-prettier
 
 Then create a `tslint.json` file in your root directory and add the following.
 
-```typescript
+```tsx
 // tslint.json
 {
   "extends": [
@@ -62,7 +62,7 @@ Then create a `tslint.json` file in your root directory and add the following.
 
 After you run the `create-react-app NavbarScrollerDemo --typescript` you should end up with a folder structure like so.
 
-```
+```text
 NavbarScrollerDemo/
 ├─ .gitignore
 ├─ node_modules/
@@ -84,7 +84,7 @@ NavbarScrollerDemo/
 
 Open your `App.tsx` file and delete all the junk so it looks like this
 
-```typescript
+```tsx
 import React, { Component } from 'react';
 
 class App extends Component {
@@ -102,7 +102,7 @@ Now we’re going to install another dependency to reset our browsers css.
 
 Now add the package to your `App.tsx`
 
-```typescript
+```tsx
 // App.tsx
 import React, { Component } from 'react';
 import 'reset-css';
@@ -114,7 +114,7 @@ With that out of the way lets start creating the component.
 
 Create a new `components/` directory in `./src/components/` and create a new `NavbarScroller.tsx` file.
 
-```typescript
+```tsx
 // ./src/components/NavbarScroller.tsx
 
 import * as React from 'react';
@@ -128,7 +128,7 @@ export default NavbarScroller;
 
 Import the component in your `App.tsx`
 
-```typescript
+```tsx
 // App.tsx
 
 import NavbarScroller from './components/NavbarScroller';
@@ -144,7 +144,7 @@ return (
 
 Now create a `navigation` object in your `App.tsx`. This will be the data we use that gets sent to the component and rendered.
 
-```typescript
+```tsx
 // App.tsx
 const navigation = {
   brand: { name: 'NavbarScroller', to: '/' },
@@ -160,13 +160,13 @@ const navigation = {
 
 Now pass the object into our component as props.
 
-```typescript
+```tsx
 // App.tsx
 export default class App extends Component {
   // the 'public' is a typescript feature.
   public render() {
 
-	// Descructured object for cleaner code :-)
+    // Descructured object for cleaner code :-)
     const { brand, links } = navigation;
 
     return (
@@ -186,7 +186,7 @@ Get it … types… typescript
 
 If we wanted to, we could simple clear the error by setting out props to any.
 
-```typescript
+```tsx
 // NavbarScroller.tsx
 
 const NavbarScroller = (props: any) => {
@@ -208,31 +208,31 @@ I’m not saying that you might not ever need to use `any` to defend you type of
 
 First let’s just tell TypeScript that the props are an object.
 
-```typescript
+```tsx
 const NavbarScroller = (props: {}) => {...}
 ```
 
 Now that we have defended the object lets add the `brand`
 
-```typescript
+```tsx
 const NavbarScroller = (props: { brand }) => {...}
 ```
 
 Now we need to defend the brand and the brand is…. you guessed it, an object.
 
-```typescript
+```tsx
 const NavbarScroller = (props: { brand: {} }) => {...}
 ```
 
 Now we can start defining the brand object that contains two strings, `name` and `to`
 
-```typescript
+```tsx
 const NavbarScroller = (props: { brand: { name: string, to: string } }) => {...}
 ```
 
 So that validates our brand object but now we need to validate our links, the array of the same object.
 
-```typescript
+```tsx
 const NavbarScroller = (props: {
   brand: { name: string; to: string };
   links: Array // Start by assigning the array
@@ -241,7 +241,7 @@ const NavbarScroller = (props: {
 
 Now we can shape the objects within the array.
 
-```typescript
+```tsx
 const NavbarScroller = (props: {
   brand: { name: string; to: string };
   links:  Array<{ name: string; to: string }>
@@ -254,7 +254,7 @@ That right there is what all the `TypeScript` Hype is about. When functions know
 
 Now lets add our Brand element
 
-```typescript
+```tsx
 // NavbarScroller.tsx
 const { brand } = props;
 // descructure object to avoid 'props.brand.to'
@@ -269,7 +269,7 @@ return (
 Mapping our links.
 Here we want out type to be `NavLinks: any` because we’re returning JSX.
 
-```typescript
+```tsx
 const NavLinks: any = () =>
   links.map((link: { name: string, to: string }) => (
     <li key={link.name}>
@@ -293,7 +293,7 @@ Lets add some `styled-components` in our `NavbarScroller.tsx`;
 npm install styled-components --save
 ```
 
-```typescript
+```tsx
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -321,7 +321,7 @@ export default NavbarScroller;
 
 ### Here is the styling I used for the styled-components
 
-```typescript
+```tsx
 const Theme = {
   colors: {
     bg: `#fff`,
@@ -390,7 +390,7 @@ const Li = styled.li`
 
 After you create the styled-components you can go back and update your component to use them like so.
 
-```typescript
+```tsx
 const NavbarScroller = (props: {
   brand: { name: string, to: string },
   links: Array<{ name: string, to: string }>
@@ -417,4 +417,6 @@ There you have it!
 
 --glweems
 
-<iframe src="https://codesandbox.io/embed/qzylvzx6rj?autoresize=1&fontsize=14&hidenavigation=1" title="react-navbar-scroller" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+[![Edit react-navbar-scroller](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-navbar-scroller-44wd0?fontsize=14)
+
+<iframe src="https://codesandbox.io/embed/react-navbar-scroller-44wd0?fontsize=14" title="react-navbar-scroller" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
