@@ -8,6 +8,7 @@ tags:
   - typescript
   - styles-components
   - navbar
+sandbox: react-navbar-scroller-44wd0
 ---
 
 # Simple navbar component using react, typescript, and styled-components.
@@ -416,7 +417,3 @@ const NavbarScroller = (props: {
 There you have it!
 
 --glweems
-
-[![Edit react-navbar-scroller](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-navbar-scroller-44wd0?fontsize=14)
-
-<iframe src="https://codesandbox.io/embed/react-navbar-scroller-44wd0?fontsize=14" title="react-navbar-scroller" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
