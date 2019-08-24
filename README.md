@@ -4,12 +4,9 @@ date: 03/19/2019
 title: Simple navbar using react, typescript, and styled-components.
 subtitle: In this project we will create a simple little Navbar component that looks cool / has a logo or brand name and features horizontal scrolling.
 thumbnail: tbn.png
-repo: https://github.com/glweems/react-navbar-scroller
-codesandbox: react-navbar-scroller-44wd0
-git:
+codesandbox:
   - github
   - glweems
-  - dotenv
   - react-navbar-scroller
 tags:
   - react
@@ -22,13 +19,13 @@ tags:
 
 The setup for a react app in `TypeScript` is almost the exact same if you’re already using `create-react-app` cli for your react applications.
 
-```
+```shell
 npx create-react-app NavbarScrollerDemo --typescript
 ```
 
 If you don’t already have the create-react-app cli run this script first
 
-```
+```shell
 npm install -g create-react-app
 ```
 
@@ -36,7 +33,7 @@ npm install -g create-react-app
 
 Before you get up and running I would recommend you installing the TSLint prettier plugin to keep things nice and tidy.
 
-```
+```shell
 npm install --save-dev tslint-config-prettier
 ```
 
@@ -283,7 +280,7 @@ Finally.
 
 Lets add some `styled-components` in our `NavbarScroller.tsx`
 
-```
+```shell
 npm install styled-components --save
 ```
 
@@ -406,7 +403,3 @@ const NavbarScroller = (props: {
   );
 };
 ```
-
-There you have it!
-
---glweems
