@@ -89,7 +89,9 @@ export default App;
 
 Now we’re going to install another dependency to reset our browsers css.
 
-`npm install reset-css --save`
+```shell
+npm install reset-css --save
+```
 
 Now add the package to your `App.tsx`
 
