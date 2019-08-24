@@ -20,7 +20,7 @@ tags:
 
 ### Setup.
 
-The setup for a react app in `TypeScript` is almost the exact same if you’re already using ``create-react-app```cli for your react applications.
+The setup for a react app in `TypeScript` is almost the exact same if you’re already using `create-react-app` cli for your react applications.
 
 ```
 npx create-react-app NavbarScrollerDemo --typescript
