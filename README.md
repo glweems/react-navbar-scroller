@@ -5,20 +5,17 @@ title: Simple navbar using react, typescript, and styled-components.
 subtitle: In this project we will create a simple little Navbar component that looks cool / has a logo or brand name and features horizontal scrolling.
 thumbnail: tbn.png
 repo: https://github.com/glweems/react-navbar-scroller
-codesandbox: react-navbar-scroller-44wd0?
+codesandbox: react-navbar-scroller-44wd0
+git:
+  - github
+  - glweems
+  - dotenv
+  - react-navbar-scroller
 tags:
   - react
   - typescript
   - styles-components
   - navbar
----
-
-# Simple navbar component using react, typescript, and styled-components.
-
-In this project we will create a simple little Navbar component that looks cool / has a logo or brand name and features horizontal scrolling.
-
-![demo](tbn.png)
-
 ---
 
 ### Setup.
