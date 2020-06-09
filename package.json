@@ -13,7 +13,7 @@
   "author": "Garrett Weems <gwgraphicdesign@gmail.com> (https://glweems.com)",
   "dependencies": {
     "@types/jest": "24.0.11",
-    "@types/node": "11.11.3",
+    "@types/node": "14.0.12",
     "@types/react-dom": "16.8.2",
     "postcss-import": "^12.0.1",
     "react": "^16.8.4",
